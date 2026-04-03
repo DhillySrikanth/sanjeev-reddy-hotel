@@ -1,0 +1,131 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Premium gold glow and divider for signature dish */
+.gold-glow {
+  box-shadow: 0 12px 40px rgba(212,175,55,0.12);
+  transition: box-shadow 300ms ease, transform 300ms ease;
+}
+
+@keyframes goldPulse {
+  0% { box-shadow: 0 8px 24px rgba(212,175,55,0.04); }
+  50% { box-shadow: 0 14px 40px rgba(212,175,55,0.10); }
+  100% { box-shadow: 0 8px 24px rgba(212,175,55,0.04); }
+}
+
+.gold-animated {
+  animation: goldPulse 6s ease-in-out infinite;
+}
+
+.gold-divider {
+  height: 2px;
+  background: linear-gradient(90deg, rgba(212,175,55,0), #D4AF37, rgba(212,175,55,0));
+  border-radius: 4px;
+}
+
+.gold-pill {
+  background: #D4AF37;
+  color: #000;
+  font-weight: 600;
+  border-radius: 9999px;
+}
+
+.pushka-highlight {
+  transform: scale(1.03);
+}
+
+/* Signature section specific classes */
+.signature-section {
+  background: linear-gradient(135deg,#0B0B0B,#1A1A1A);
+}
+.signature-panel {
+  background: rgba(11,11,11,0.85);
+  border: 1px solid rgba(212,175,55,0.12);
+  border-radius: 16px;
+}
+.signature-title {
+  color: #D4AF37;
+}
+.signature-main {
+  color: #D4AF37;
+  line-height: 1.05;
+  font-weight: 900;
+}
+.signature-subtext {
+  color: #e5e7eb;
+}
+.signature-img-overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.28));
+}
+.signature-img {
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(212,175,55,0.12);
+  transition: transform 500ms ease;
+}
+.signature-img:hover {
+  transform: scale(1.03);
+}
+
+/* Reveal-triggered enhancements for signature section */
+[data-visible="true"] .signature-panel {
+  transform: translateY(0) scale(1.02);
+  box-shadow: 0 28px 60px rgba(212,175,55,0.18);
+  transition: box-shadow 600ms ease, transform 600ms ease;
+}
+
+[data-visible="true"] .signature-img {
+  transform: scale(1.04);
+  transition: transform 700ms cubic-bezier(.2,.9,.3,1);
+}
+
+[data-visible="true"] .gold-pill {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 500ms ease, opacity 500ms ease;
+}
+
+[data-visible="false"] .gold-pill {
+  transform: translateY(-8px);
+  opacity: 0;
+}
+
